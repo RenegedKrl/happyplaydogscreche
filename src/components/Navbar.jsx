@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import './Navbar.css';
+import logoImg from '../assets/logo/LOGO-1.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [logo, setLogo] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,15 +13,6 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Dynamically load logo if it exists in the folder
-  useEffect(() => {
-    const logos = import.meta.glob('../assets/logo/*.(png|jpg|jpeg|svg)', { eager: true });
-    const logoPaths = Object.values(logos).map(mod => mod.default);
-    if (logoPaths.length > 0) {
-      setLogo(logoPaths[0]);
-    }
   }, []);
 
   const navLinks = [
@@ -36,11 +27,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="logo">
-          {logo ? (
-            <img src={logo} alt="Happy Play Dog Logo" className="logo-img" />
-          ) : (
-            <span className="logo-text">Happy Play Dog</span>
-          )}
+          <img src={logoImg} alt="Happy Play Dog Logo" className="logo-img" />
         </a>
 
         {/* Desktop Menu */}
