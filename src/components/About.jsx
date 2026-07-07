@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Clock, Smile } from 'lucide-react';
+import aboutImage from '../assets/gallery/WhatsApp Image 2026-07-06 at 14.45.21.jpeg';
 import './About.css';
 
 const About = () => {
@@ -26,9 +27,7 @@ const About = () => {
       <div className="container">
         <div className="about-grid">
           <div className="about-visual">
-             <div className="placeholder-image-square">
-               <span>Foto da Equipe/Espaço</span>
-             </div>
+             <img src={aboutImage} alt="Nossa Equipe e Espaço" className="about-main-image" />
              <div className="experience-badge">
                 <span className="years">5+</span>
                 <span className="text">Anos de<br/>Experiência</span>
@@ -42,10 +41,9 @@ const About = () => {
             </div>
             
             <p className="about-description">
-              A <strong>Happy Play Dog</strong> nasceu da paixão por cães e da necessidade 
-              de proporcionar um ambiente onde eles pudessem ser eles mesmos. 
-              Sabemos o quão difícil é deixar seu melhor amigo em casa sozinho o dia todo. 
-              Aqui, ele terá atenção, cuidado e muita diversão.
+              A <strong>Happy Play Dogs</strong> é um espaço completo voltado ao bem-estar e à qualidade de vida dos
+              pets, oferecendo diversos serviços em um só lugar. Nosso propósito é proporcionar uma experiência completa 
+              para os tutores e seus pets, reunindo cuidado, saúde e diversão em um único lugar!
             </p>
             
             <div className="features-list">

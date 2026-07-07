@@ -5,6 +5,7 @@ import './Gallery.css';
 const Gallery = () => {
   const [images, setImages] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     // Vite specific way to import multiple files dynamically
@@ -49,6 +50,8 @@ const Gallery = () => {
     setLightboxIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const visibleImages = showAll ? images : images.slice(0, 6);
+
   return (
     <section id="gallery" className="section section-alt">
       <div className="container">
@@ -56,12 +59,12 @@ const Gallery = () => {
           <span className="section-subtitle">Momentos de Alegria</span>
           <h2>Galeria de Fotos</h2>
           <p style={{marginTop: '1rem', color: 'var(--text-muted)'}}>
-            Confira a estrutura que preparamos com tanto carinho. (Adicione fotos na pasta <code>src/assets/gallery</code>)
+            Confira a estrutura que preparamos com tanto carinho.
           </p>
         </div>
         
         <div className="gallery-grid">
-          {images.map((imgSrc, index) => (
+          {visibleImages.map((imgSrc, index) => (
             <div className="gallery-item" key={index} onClick={() => openLightbox(index)}>
               {imgSrc ? (
                 <img src={imgSrc} alt={`Galeria ${index + 1}`} loading="lazy" />
@@ -73,6 +76,18 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        {images.length > 6 && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
+            <button 
+              className="btn btn-outline" 
+              onClick={() => setShowAll(!showAll)}
+              style={{ minWidth: '200px' }}
+            >
+              {showAll ? 'Ver Menos' : 'Ver Mais Fotos'}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox Modal */}

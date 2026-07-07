@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Heart } from 'lucide-react';
+import heroImage from '../assets/logo apps/hero.jpeg';
 import './Hero.css';
 
 const Hero = () => {
@@ -32,9 +33,7 @@ const Hero = () => {
         </div>
         <div className="hero-visual" style={{ position: 'relative' }}>
           <div className="image-wrapper">
-            <div className="placeholder-image">
-              <span>Imagem de Cães Felizes</span>
-            </div>
+            <img src={heroImage} alt="Cães Felizes" className="hero-main-image" />
           </div>
           <div className="floating-card">
             <span className="emoji">🐾</span>

@@ -25,10 +25,6 @@ const Contact = () => {
                 <img src={whatsappIcon} alt="WhatsApp" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
                 (11) 99124-9837
               </a>
-              <a href="tel:+551133333333" className="contact-link">
-                <Phone size={24} />
-                (11) 3333-3333
-              </a>
               <a href="mailto:contato@happyplaydog.com.br" className="contact-link">
                 <Mail size={24} />
                 contato@happyplaydog.com.br

@@ -9,18 +9,13 @@
   position: relative;
 }
 
-.placeholder-image-square {
+.about-main-image {
   width: 100%;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+  object-fit: cover;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 1.5rem;
-  font-weight: 500;
   box-shadow: var(--shadow-lg);
+  display: block;
 }
 
 .experience-badge {

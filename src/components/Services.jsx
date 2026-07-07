@@ -1,28 +1,33 @@
 import React from 'react';
-import { Home, Camera, Scissors, Award } from 'lucide-react';
+import { Home, Scissors, ShoppingBag, Moon, Stethoscope } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
   const services = [
     {
-      icon: <Home size={40} />,
-      title: "Creche & Daycare",
-      description: "Um dia inteiro de atividades recreativas, gasto de energia e interação controlada com outros cães."
-    },
-    {
-      icon: <Award size={40} />,
-      title: "Hotelzinho",
-      description: "Hospedagem confortável e segura para quando você precisar viajar, com a rotina que seu pet já está acostumado."
+      icon: <ShoppingBag size={40} />,
+      title: "Loja Pet",
+      description: "Diversos produtos para cães e gatos, sempre buscando oferecer qualidade e as melhores opções para os tutores."
     },
     {
       icon: <Scissors size={40} />,
-      title: "Estética & Banho",
-      description: "Serviços de banho relaxante e tosa para deixar seu melhor amigo limpinho e cheiroso após um dia de diversão."
+      title: "Centro Estético",
+      description: "Banho, tosas específicas por raça, hidratações e revitalização de pelagem com atendimento personalizado."
     },
     {
-      icon: <Camera size={40} />,
-      title: "Acompanhamento",
-      description: "Fotos e vídeos diários para você matar a saudade e acompanhar a rotina de diversão do seu pet."
+      icon: <Home size={40} />,
+      title: "Creche (Daycare)",
+      description: "Destinada a cães de porte pequeno. Rotina com atividades, socialização, enriquecimento ambiental e monitores."
+    },
+    {
+      icon: <Moon size={40} />,
+      title: "Hotelzinho",
+      description: "Oferecemos hospedagem garantindo conforto, segurança e muito carinho durante toda estadia do seu pet."
+    },
+    {
+      icon: <Stethoscope size={40} />,
+      title: "Clínica Veterinária",
+      description: "Atendimento veterinário para consultas, vacinação e acompanhamento da saúde, no particular e convênio."
     }
   ];
 
