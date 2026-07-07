@@ -11,7 +11,7 @@ const Gallery = () => {
     // Vite specific way to import multiple files dynamically
     const loadImages = async () => {
       try {
-        const imageFiles = import.meta.glob('../assets/gallery/*.(png|jpg|jpeg|webp)', { eager: true });
+        const imageFiles = import.meta.glob('../assets/gallery/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', { eager: true });
         const loadedImages = Object.values(imageFiles).map(mod => mod.default);
         
         // If the folder is empty, use placeholders for visual representation
