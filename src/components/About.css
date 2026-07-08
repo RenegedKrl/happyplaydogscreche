@@ -97,6 +97,14 @@
     gap: 5rem;
   }
   
+  .about-visual {
+    order: 2;
+  }
+  
+  .about-content {
+    order: 1;
+  }
+  
   .experience-badge {
     bottom: -1.5rem;
     right: 1.5rem;
