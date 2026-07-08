@@ -19,12 +19,12 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <BeforeAfter />
-        <Gallery />
-        <CtaBanner />
         <Services />
+        <CtaBanner />
+        <About />
         <Testimonials />
+        <Gallery />
+        <BeforeAfter />
         <Faq />
         <Location />
         <Contact />
