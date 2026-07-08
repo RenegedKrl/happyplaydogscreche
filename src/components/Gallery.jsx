@@ -1,33 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Gallery.css';
+import img1 from '../assets/gallery/1.jpg';
+import img2 from '../assets/gallery/2.jpeg';
+import img3 from '../assets/gallery/3.jpeg';
+import img4 from '../assets/gallery/4.jpeg';
+import img5 from '../assets/gallery/5.jpeg';
+import img6 from '../assets/gallery/6.jpeg';
+import img7 from '../assets/gallery/7.jpeg';
+import img8 from '../assets/gallery/8.jpeg';
+import img9 from '../assets/gallery/9.jpeg';
+import img10 from '../assets/gallery/10.jpeg';
+import img11 from '../assets/gallery/11.jpeg';
+import img12 from '../assets/gallery/12.jpeg';
+
+const allImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
 const Gallery = () => {
-  const [images, setImages] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    // Vite specific way to import multiple files dynamically
-    const loadImages = async () => {
-      try {
-        const imageFiles = import.meta.glob('../assets/gallery/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', { eager: true });
-        const loadedImages = Object.values(imageFiles).map(mod => mod.default);
-        
-        // If the folder is empty, use placeholders for visual representation
-        if (loadedImages.length === 0) {
-          setImages([null, null, null, null, null, null]);
-        } else {
-          setImages(loadedImages);
-        }
-      } catch (error) {
-        console.error("Error loading gallery images:", error);
-        setImages([null, null, null, null, null, null]);
-      }
-    };
-
-    loadImages();
-  }, []);
+  const images = allImages;
 
   const openLightbox = (index) => {
     // Only open if the image is not a placeholder

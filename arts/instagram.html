@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+  body {
+    margin: 0; padding: 0; width: 1080px; height: 1350px;
+    background-color: #111;
+    background-image: radial-gradient(circle at 50% 50%, #1a3a1a 0%, #111 70%);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+    color: white;
+  }
+  .bg-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: #0a650a;
+    filter: blur(150px);
+    opacity: 0.3;
+    top: 20%; left: -100px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .bg-glow-2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: #ffc700;
+    filter: blur(150px);
+    opacity: 0.15;
+    bottom: 10%; right: -100px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .content {
+    position: absolute;
+    z-index: 10;
+    width: 100%; height: 100%;
+  }
+  .header {
+    padding: 80px;
+  }
+  .title {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+  }
+  .title span { color: #ffc700; }
+  .subtitle {
+    font-size: 30px;
+    color: #aaa;
+    max-width: 600px;
+    line-height: 1.4;
+  }
+  
+  .phones-container {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    perspective: 2000px;
+  }
+
+  .phone {
+    width: 320px;
+    height: 650px;
+    background: #000;
+    border-radius: 40px;
+    border: 12px solid #222;
+    box-shadow: -20px 30px 50px rgba(0,0,0,0.6), inset 0 0 10px rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  .phone.left {
+    transform: rotateY(15deg) rotateX(10deg) translateZ(-50px) translateY(50px);
+  }
+  .phone.right {
+    transform: rotateY(-15deg) rotateX(10deg) translateZ(50px) translateY(-20px);
+  }
+  
+  .notch {
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 25px;
+    background: #222;
+    border-radius: 0 0 15px 15px;
+    z-index: 20;
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .screen-1 { background-image: url('../screenshots/2-mobile-menu-fechado-full.png'); }
+  .screen-2 { background-image: url('../screenshots/3-mobile-menu-aberto-full.png'); }
+
+  .floating-badge {
+    position: absolute;
+    bottom: 150px; left: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    z-index: 30;
+    max-width: 300px;
+  }
+  .badge-title { font-size: 45px; font-weight: 900; color: #ffc700; margin-bottom: 10px;}
+  .badge-text { font-size: 20px; color: #ddd; line-height: 1.4;}
+
+  .seo-tags {
+    position: absolute;
+    bottom: 50px; left: 80px;
+    font-size: 16px;
+    color: #666;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+  
+  <div class="content">
+    <div class="header">
+      <div class="title">Totalmente<br><span>Adaptável.</span></div>
+      <div class="subtitle">A versão mobile reflete a essência da marca com navegação suave e forte apelo de conversão.</div>
+    </div>
+
+    <div class="phones-container">
+      <div class="phone left">
+        <div class="notch"></div>
+        <div class="phone-screen screen-1"></div>
+      </div>
+      <div class="phone right">
+        <div class="notch"></div>
+        <div class="phone-screen screen-2"></div>
+      </div>
+    </div>
+
+    <div class="floating-badge">
+      <div class="badge-title">100%</div>
+      <div class="badge-text">Otimizado para atrair e converter clientes direto no WhatsApp.</div>
+    </div>
+
+    <div class="seo-tags">
+      #WEBDESIGN #LANDINGPAGE #UIUX #HAPPYPLAYDOGS #SITES
+    </div>
+  </div>
+</body>
+</html>

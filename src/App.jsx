@@ -11,6 +11,7 @@ import CtaBanner from './components/CtaBanner';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Testimonials from './components/Testimonials';
 import Faq from './components/Faq';
+import BeforeAfter from './components/BeforeAfter';
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Services />
         <CtaBanner />
+        <About />
         <Testimonials />
         <Gallery />
+        <BeforeAfter />
         <Faq />
         <Location />
         <Contact />

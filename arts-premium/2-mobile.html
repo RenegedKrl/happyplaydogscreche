@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&display=swap');
+  body { margin:0; width:1080px; height:1350px; background:#050505; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+  .glow1 { position:absolute; width:1200px; height:1200px; background:radial-gradient(circle, rgba(10,101,10,0.4) 0%, transparent 60%); top:-300px; right:-300px; }
+  .grid { position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+  .title { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -4px; text-align:center; margin-top: 150px; position:relative; z-index:10;}
+  .title span { color: #ffc700; }
+  .phones { position:absolute; top: 450px; left:0; width:100%; display:flex; justify-content:center; align-items:flex-start; z-index:5;}
+  .phone { width: 420px; height: 850px; background:#000; border-radius: 50px; border: 12px solid #1a1a1a; overflow:hidden; box-shadow: 0 30px 100px rgba(0,0,0,0.9); position:relative; }
+  .p1 { transform: rotate(-4deg) translateY(40px); z-index:2; margin-right:-40px;}
+  .p2 { transform: rotate(6deg); z-index:1; margin-left:-40px; border-color:#222;}
+  .p-content { position:absolute; top:0; left:0; width:100%; height:100%; background: url('../screenshots/2-mobile-menu-fechado-full.png') top center/100% auto no-repeat; }
+  .p2 .p-content { background-image: url('../screenshots/3-mobile-menu-aberto-full.png'); }
+</style>
+</head>
+<body>
+<div class="grid"></div><div class="glow1"></div>
+<div class="title">Design que<br><span>converte.</span></div>
+<div class="phones">
+  <div class="phone p1"><div class="p-content"></div></div>
+  <div class="phone p2"><div class="p-content"></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#020a05; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+
+  /* Fundo */
+  .glow-yellow { position:absolute; width:800px; height:800px;
+    background:radial-gradient(circle, rgba(255,199,0,0.1) 0%, transparent 60%);
+    bottom:-200px; left:-200px; z-index:0; }
+  .glow-green { position:absolute; width:1000px; height:1000px;
+    background:radial-gradient(circle, rgba(10,101,10,0.25) 0%, transparent 55%);
+    top:-100px; right:-200px; z-index:0; }
+  .grid { position:absolute; inset:0; z-index:0;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size:60px 60px; }
+
+  /* Texto topo */
+  .content { position:relative; z-index:20; padding: 90px 90px 0; }
+  .tag { font-size:18px; font-weight:700; color:#ffc700; letter-spacing:4px; text-transform:uppercase; margin-bottom:25px; }
+  h1 { font-size:88px; font-weight:900; line-height:1; letter-spacing:-3px; margin-bottom:35px; }
+  h1 em { font-style:normal; color:#0a650a; }
+  .desc { font-size:22px; font-weight:300; color:rgba(255,255,255,0.7); max-width:780px; line-height:1.7; }
+  .slide-num { position:absolute; top:90px; right:90px; z-index:20; font-size:22px; font-weight:800; color:rgba(255,255,255,0.2); }
+
+  /* Três phones CSS */
+  .phones-area {
+    position:absolute;
+    bottom:160px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:10;
+    display:flex;
+    align-items:flex-end;
+    gap:0;
+    width:860px;
+    justify-content:center;
+  }
+
+  /* Phone genérico */
+  .phone-wrap { position:relative; }
+  .phone-body {
+    background: linear-gradient(170deg, #2a2a2c, #1a1a1c);
+    border-radius:40px;
+    border:3px solid #3c3c3e;
+    box-shadow: 0 0 0 1px #0a0a0a, 0 30px 80px rgba(0,0,0,0.95);
+    padding:12px;
+    position:relative;
+  }
+  .phone-notch { height:22px; background:#1a1a1c; border-radius:0 0 14px 14px; margin:0 auto 8px; }
+  .phone-screen {
+    background:#000; border-radius:24px;
+    overflow:hidden; position:relative;
+  }
+  .phone-content {
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    background-repeat:no-repeat; background-position: top center;
+    background-size:100% auto;
+  }
+  .phone-btn { height:4px; background:#2a2a2c; border-radius:2px; margin:8px auto 0; }
+
+  /* Phone central — maior e na frente */
+  .phone-center .phone-body { width:240px; }
+  .phone-center .phone-notch { width:80px; }
+  .phone-center .phone-screen { width:100%; height:470px; }
+  .phone-center .phone-btn { width:36px; }
+  .phone-center { z-index:12; }
+
+  /* Phones laterais — menores, inclinados, desfocados */
+  .phone-left .phone-body { width:180px; }
+  .phone-left .phone-notch { width:60px; }
+  .phone-left .phone-screen { width:100%; height:350px; }
+  .phone-left .phone-btn { width:28px; }
+  .phone-left {
+    transform: rotate(-8deg) translateY(30px) translateX(40px);
+    z-index:8; opacity:0.7; filter:blur(1.5px);
+  }
+
+  .phone-right .phone-body { width:180px; }
+  .phone-right .phone-notch { width:60px; }
+  .phone-right .phone-screen { width:100%; height:350px; }
+  .phone-right .phone-btn { width:28px; }
+  .phone-right {
+    transform: rotate(8deg) translateY(30px) translateX(-40px);
+    z-index:8; opacity:0.7; filter:blur(1.5px);
+  }
+
+  /* Insights na base */
+  .insight-row { position:absolute; bottom:80px; left:90px; right:90px; z-index:20;
+    display:flex; gap:20px; }
+  .insight-card { flex:1; background:rgba(10,101,10,0.1); border:1px solid rgba(10,101,10,0.3);
+    border-radius:20px; padding:28px; backdrop-filter:blur(16px); }
+  .ic-label { font-size:13px; font-weight:700; color:#ffc700; text-transform:uppercase; letter-spacing:3px; margin-bottom:8px; }
+  .ic-value { font-size:19px; font-weight:700; line-height:1.3; }
+</style>
+</head>
+<body>
+<div class="glow-green"></div>
+<div class="glow-yellow"></div>
+<div class="grid"></div>
+<div class="slide-num">3 / 6</div>
+
+<div class="content">
+  <div class="tag">Ideia &amp; Planejamento</div>
+  <h1>Estratégia<br><em>Mobile-First</em></h1>
+  <div class="desc">Para a Happy Play Dogs, entendemos que 90% dos clientes chegam pelo celular. Por isso estruturamos toda a jornada para converter no mobile, com botões de WhatsApp sempre visíveis.</div>
+</div>
+
+<div class="phones-area">
+  <div class="phone-wrap phone-left">
+    <div class="phone-body">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-content" style="background-image:url('../screenshots/2-mobile-menu-fechado-full.png')"></div>
+      </div>
+      <div class="phone-btn"></div>
+    </div>
+  </div>
+  <div class="phone-wrap phone-center">
+    <div class="phone-body">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-content" style="background-image:url('../screenshots/4-mobile-todas-abas-fechadas-full.png')"></div>
+      </div>
+      <div class="phone-btn"></div>
+    </div>
+  </div>
+  <div class="phone-wrap phone-right">
+    <div class="phone-body">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-content" style="background-image:url('../screenshots/3-mobile-menu-aberto-full.png')"></div>
+      </div>
+      <div class="phone-btn"></div>
+    </div>
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-card"><div class="ic-label">Abordagem</div><div class="ic-value">Mobile-First Design</div></div>
+  <div class="insight-card"><div class="ic-label">Objetivo</div><div class="ic-value">Conversão via WhatsApp</div></div>
+  <div class="insight-card"><div class="ic-label">Tecnologia</div><div class="ic-value">React + Vite + CSS</div></div>
+</div>
+</body>
+</html>

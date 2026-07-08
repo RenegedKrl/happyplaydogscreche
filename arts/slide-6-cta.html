@@ -1,0 +1,35 @@
+
+      <!DOCTYPE html>
+      <html lang="pt-BR">
+      <head>
+      <style>
+        body { margin: 0; padding: 0; width: 1080px; height: 1350px; background: #EAEFF5; font-family: 'Inter', sans-serif; overflow: hidden; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .grid-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: linear-gradient(#0a650a 2px, transparent 2px), linear-gradient(90deg, #0a650a 2px, transparent 2px); background-size: 100px 100px; }
+        .content { position: relative; z-index: 10; padding: 80px; display: flex; flex-direction: column; align-items: center; }
+        .title { font-size: 90px; font-weight: 900; color: #212121; line-height: 1.1; letter-spacing: -3px; margin-bottom: 30px; }
+        .title span { color: #0a650a; }
+        .subtitle { font-size: 32px; color: #555; font-weight: 500; margin-bottom: 80px; }
+        .btn { display: inline-block; background: #212121; color: #fff; font-size: 30px; font-weight: 800; padding: 35px 70px; border-radius: 60px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .images { display: flex; justify-content: center; margin-bottom: 60px; }
+        .img-circle { width: 220px; height: 220px; border-radius: 50%; border: 10px solid #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); background-size: cover; background-position: top; }
+        .img-1 { background-image: url('../screenshots/1-desktop-full.png'); z-index: 3; transform: rotate(-10deg); }
+        .img-2 { background-image: url('../screenshots/2-mobile-menu-fechado-full.png'); z-index: 2; margin-left: -50px; transform: rotate(5deg); }
+        .img-3 { background-image: url('../screenshots/3-mobile-menu-aberto-full.png'); z-index: 1; margin-left: -50px; transform: rotate(15deg); }
+      </style>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <div class="grid-bg"></div>
+      <div class="content">
+        <div class="images">
+          <div class="img-circle img-1"></div>
+          <div class="img-circle img-2"></div>
+          <div class="img-circle img-3"></div>
+        </div>
+        <div class="title">Pronto para ter<br>um <span>site incrível?</span></div>
+        <div class="subtitle">Aumente sua autoridade e suas vendas.</div>
+        <div class="btn">Solicite um Orçamento</div>
+      </div>
+      </body>
+      </html>
+    

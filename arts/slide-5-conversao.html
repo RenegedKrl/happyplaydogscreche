@@ -1,0 +1,41 @@
+
+      <!DOCTYPE html>
+      <html lang="pt-BR">
+      <head>
+      <style>
+        body { margin: 0; padding: 0; width: 1080px; height: 1350px; background: #111; font-family: 'Inter', sans-serif; overflow: hidden; position: relative; color: white; }
+        .bg-glow { position: absolute; width: 800px; height: 800px; background: #ffc700; filter: blur(250px); opacity: 0.15; bottom: -200px; right: -200px; border-radius: 50%; }
+        .header { padding: 100px 80px; position: relative; z-index: 10; }
+        .title { font-size: 85px; font-weight: 900; line-height: 1; letter-spacing: -3px; }
+        .title span { color: #0a650a; }
+        .subtitle { font-size: 30px; color: rgba(255,255,255,0.7); margin-top: 20px; font-weight: 300; max-width: 600px; }
+        .phone-zoom { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 700px; height: 800px; background: #000; border-radius: 60px 60px 0 0; border: 20px solid #222; border-bottom: none; box-shadow: 0 -20px 80px rgba(0,0,0,0.8); overflow: hidden; }
+        .screen { width: 100%; height: 100%; background-image: url('../screenshots/4-mobile-todas-abas-fechadas-full.png'); background-size: 100% auto; background-position: bottom center; }
+        .notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 220px; height: 40px; background: #222; border-radius: 0 0 20px 20px; z-index: 20; }
+        .floating-card { position: absolute; top: 480px; left: 80px; background: #fff; color: #111; padding: 35px 45px; border-radius: 20px; display: flex; align-items: center; gap: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); z-index: 30; }
+        .icon { width: 70px; height: 70px; background: #0a650a; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 35px; font-weight: bold; }
+        .card-text { font-size: 28px; font-weight: 900; }
+        .card-sub { font-size: 20px; color: #666; font-weight: 500; }
+      </style>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <div class="bg-glow"></div>
+      <div class="header">
+        <div class="title">Geração<br>de <span>Leads.</span></div>
+        <div class="subtitle">CTAs estratégicos para maximizar o contato via WhatsApp.</div>
+      </div>
+      <div class="floating-card">
+        <div class="icon">✓</div>
+        <div>
+          <div class="card-text">Alta Conversão</div>
+          <div class="card-sub">Botões persuasivos no layout</div>
+        </div>
+      </div>
+      <div class="phone-zoom">
+        <div class="notch"></div>
+        <div class="screen"></div>
+      </div>
+      </body>
+      </html>
+    

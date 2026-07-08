@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&display=swap');
+  body { margin:0; width:1080px; height:1350px; background-color:#050505; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+  .bg-img { position:absolute; inset:0; background: url('file:///C:/Users/kauek/.gemini/antigravity/brain/69243d6f-e701-4ba6-a535-cfab6fff6002/rocks_background_1783482781097.png') center center/cover no-repeat; opacity:0.85; z-index:0; filter: contrast(1.1) saturate(1.2); }
+  .overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.95) 100%); z-index:1; }
+  .glow { position:absolute; width:1200px; height:1200px; background:radial-gradient(circle, rgba(10,101,10,0.5) 0%, transparent 70%); z-index:2; top:50%; left:50%; transform:translate(-50%, -50%); filter:blur(100px); mix-blend-mode: screen; pointer-events:none;}
+  .content { position:relative; z-index:10; width:100%; height:100%; display:flex; flex-direction:column; padding: 100px 80px; box-sizing:border-box; }
+  .browser { background:#111; border: 1px solid rgba(255,255,255,0.15); border-radius: 24px 24px 0 0; overflow:hidden; box-shadow: 0 40px 120px rgba(0,0,0,0.9); }
+  .b-top { height: 45px; border-bottom: 1px solid rgba(255,255,255,0.05); display:flex; align-items:center; padding: 0 25px; gap: 10px; background:#161616;}
+  .dot { width: 14px; height: 14px; border-radius: 50%; }
+  .d-r { background: #ff5f56; } .d-y { background: #ffbd2e; } .d-g { background: #27c93f; }
+  .title-group { text-align:center; margin-top: 50px; margin-bottom: 150px;}
+  .t-main { font-size: 150px; font-weight: 800; line-height: 0.9; letter-spacing: -6px; text-transform:lowercase; color: rgba(255,255,255,0.9); text-shadow: 0 0 50px rgba(255,255,255,0.4); }
+  .t-sub { font-size: 120px; font-weight: 300; line-height: 0.9; letter-spacing: -4px; text-transform:lowercase; color: #ffc700; }
+  .badge { display:inline-block; border: 1px solid rgba(255,255,255,0.3); padding: 12px 25px; border-radius: 40px; font-size: 18px; font-weight: 600; letter-spacing: 2px; margin-bottom: 30px; text-transform:uppercase; background: rgba(255,255,255,0.05); backdrop-filter:blur(10px);}
+  .browser-mockup { width: 900px; height: 650px; margin: 0 auto; transform: perspective(1000px) rotateX(10deg); transform-origin: bottom; }
+  .b-content { height: 605px; background: url('../screenshots/1-desktop-full.png') top center/100% no-repeat; }
+</style></head><body>
+<div class="bg-img"></div><div class="overlay"></div><div class="glow"></div>
+<div class="content">
+  <div class="title-group">
+    <div class="badge">Projeto Recente • Happy Play Dogs</div>
+    <div class="t-main">trabalhos</div>
+    <div class="t-sub">recentes</div>
+  </div>
+  <div class="browser browser-mockup">
+    <div class="b-top"><div class="dot d-r"></div><div class="dot d-y"></div><div class="dot d-g"></div></div>
+    <div class="b-content"></div>
+  </div>
+</div>
+</body></html>

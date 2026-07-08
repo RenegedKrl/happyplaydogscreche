@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Heart } from 'lucide-react';
-import heroImage from '../assets/logo apps/hero.jpeg';
+import heroImage from '../assets/gallery/WhatsApp Image 2026-07-06 at 14.45.18.jpeg';
 import './Hero.css';
 
 const Hero = () => {

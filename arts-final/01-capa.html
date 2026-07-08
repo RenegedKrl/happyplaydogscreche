@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#050a06; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+
+  /* Fundo ambiente */
+  .glow-green { position:absolute; width:1400px; height:1400px;
+    background:radial-gradient(circle, rgba(10,101,10,0.35) 0%, transparent 55%);
+    top:-300px; right:-400px; z-index:0; }
+  .glow-dark { position:absolute; width:1000px; height:800px;
+    background:radial-gradient(circle, rgba(0,0,0,0.8) 0%, transparent 70%);
+    bottom:0; left:50%; transform:translateX(-50%); z-index:0; }
+  .grid { position:absolute; inset:0; z-index:0;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px; }
+
+  /* Texto */
+  .content { position:absolute; top:0; left:0; right:0; z-index:20; padding: 90px 90px 0; }
+  .badge { display:inline-flex; align-items:center; gap:10px;
+    border: 1px solid rgba(255,255,255,0.2); padding: 12px 28px; border-radius: 100px;
+    font-size: 18px; font-weight: 600; letter-spacing: 2px; text-transform:uppercase;
+    background: rgba(255,255,255,0.05); backdrop-filter:blur(12px); margin-bottom: 45px; }
+  .badge-dot { width:10px; height:10px; border-radius:50%; background:#0a650a; box-shadow: 0 0 12px #0a650a; }
+  .tag { font-size:18px; font-weight:700; color:#ffc700; letter-spacing:4px; text-transform:uppercase; margin-bottom: 18px; }
+  h1 { font-size:95px; font-weight:900; line-height:0.92; letter-spacing:-4px; margin-bottom:24px; text-transform:lowercase; }
+  h1 .word2 { display:block; color:rgba(255,255,255,0.2); -webkit-text-stroke: 2px rgba(255,255,255,0.35); }
+  .sub { font-size:22px; font-weight:300; color:rgba(255,255,255,0.6); max-width:560px; line-height:1.6; }
+
+  /* MacBook CSS puro */
+  .laptop-wrap {
+    position:absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 920px;
+  }
+  .laptop-lid {
+    width: 920px;
+    background: linear-gradient(170deg, #323234 0%, #1a1a1c 100%);
+    border-radius: 18px 18px 5px 5px;
+    border: 3px solid #404042;
+    box-shadow:
+      0 0 0 1px #0a0a0a,
+      0 -40px 100px rgba(10,101,10,0.2),
+      0 30px 80px rgba(0,0,0,0.95);
+    padding: 14px 14px 8px 14px;
+  }
+  .camera-row {
+    width:100%; display:flex; justify-content:center; margin-bottom:8px;
+  }
+  .camera-dot { width:8px; height:8px; background:#2a2a2c; border-radius:50%; }
+  /* A TELA — overflow:hidden é a chave para o site ficar dentro */
+  .screen {
+    width:100%;
+    height:530px;
+    background:#000;
+    border-radius:5px;
+    overflow:hidden;
+    position:relative;
+  }
+  .screen-content {
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    background: url('../screenshots/1-desktop-full.png') top center / 100% auto no-repeat;
+    background-color:#f5f0e8;
+  }
+  .laptop-base {
+    width:960px; margin:0 auto; height:20px;
+    background: linear-gradient(180deg, #3c3c3e 0%, #28282a 100%);
+    border-radius: 0 0 8px 8px;
+    border: 2px solid #1a1a1a; border-top:none;
+    position:relative;
+  }
+  .laptop-base::after {
+    content:'MacBook Pro';
+    position:absolute;
+    top:50%; left:50%; transform:translate(-50%,-50%);
+    font-size:8px; letter-spacing:2px; color:rgba(255,255,255,0.15);
+    font-family:'Manrope', sans-serif; font-weight:600;
+  }
+  .laptop-hinge {
+    width:200px; height:5px; margin:0 auto;
+    background:#1e1e20; border-radius:0 0 6px 6px;
+  }
+  .laptop-shadow {
+    width:780px; height:50px; margin:4px auto 0;
+    background:radial-gradient(ellipse, rgba(0,0,0,0.85) 0%, transparent 70%);
+    border-radius:50%;
+  }
+
+  /* Número do slide */
+  .slide-num { position:absolute; bottom:25px; right:90px; z-index:15;
+    font-size:26px; font-weight:800; color:rgba(255,255,255,0.18); }
+</style>
+</head>
+<body>
+<div class="glow-green"></div>
+<div class="glow-dark"></div>
+<div class="grid"></div>
+
+<div class="content">
+  <div class="badge"><div class="badge-dot"></div>Projeto Recente &bull; Happy Play Dogs</div>
+  <div class="tag">Web Design &amp; Desenvolvimento</div>
+  <h1>trabalhos<span class="word2">recentes</span></h1>
+  <div class="sub">Site completo para pet shop e creche — da estratégia ao código, com foco em conversão via WhatsApp.</div>
+</div>
+
+<div class="laptop-wrap">
+  <div class="laptop-lid">
+    <div class="camera-row"><div class="camera-dot"></div></div>
+    <div class="screen">
+      <div class="screen-content"></div>
+    </div>
+  </div>
+  <div class="laptop-base"></div>
+  <div class="laptop-hinge"></div>
+  <div class="laptop-shadow"></div>
+</div>
+
+<div class="slide-num">1 / 6</div>
+</body>
+</html>

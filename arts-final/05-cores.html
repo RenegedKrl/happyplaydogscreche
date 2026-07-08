@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#020a05; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+
+  .glow1 { position:absolute; width:1000px; height:1000px;
+    background:radial-gradient(circle, rgba(10,101,10,0.2) 0%, transparent 55%);
+    top:-200px; left:-200px; z-index:0; }
+  .glow2 { position:absolute; width:800px; height:800px;
+    background:radial-gradient(circle, rgba(255,199,0,0.08) 0%, transparent 60%);
+    bottom:-100px; right:-100px; z-index:0; }
+  .grid { position:absolute; inset:0; z-index:0;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size:60px 60px; }
+
+  .content { position:relative; z-index:10; padding: 90px; }
+  .slide-num { position:absolute; top:90px; right:90px; z-index:20; font-size:22px; font-weight:800; color:rgba(255,255,255,0.2); }
+  .tag { font-size:18px; font-weight:700; color:#ffc700; letter-spacing:4px; text-transform:uppercase; margin-bottom:25px; }
+  h1 { font-size:85px; font-weight:900; line-height:1; letter-spacing:-3px; margin-bottom:60px; }
+
+  .colors-grid { display:flex; flex-direction:column; gap:24px; }
+  .color-card { display:flex; align-items:center; gap:40px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:28px; padding:40px; backdrop-filter:blur(12px); }
+  .color-swatch { width:130px; height:130px; border-radius:20px; flex-shrink:0; box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+  .color-info { flex:1; }
+  .ci-name { font-size:30px; font-weight:800; margin-bottom:8px; }
+  .ci-hex { font-size:18px; font-weight:700; font-family:monospace; opacity:0.45; margin-bottom:14px; }
+  .ci-why { font-size:19px; font-weight:300; color:rgba(255,255,255,0.75); line-height:1.55; }
+</style>
+</head>
+<body>
+<div class="glow1"></div>
+<div class="glow2"></div>
+<div class="grid"></div>
+<div class="slide-num">5 / 6</div>
+<div class="content">
+  <div class="tag">Decisões de Design</div>
+  <h1>Cores que<br>Comunicam</h1>
+  <div class="colors-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0a650a;"></div>
+      <div class="color-info">
+        <div class="ci-name">Verde Confiança</div>
+        <div class="ci-hex">#0A650A</div>
+        <div class="ci-why">Cor primária. Remete à natureza, saúde animal e espaço ao ar livre. Usada no header, CTAs e destaques.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#ffc700;"></div>
+      <div class="color-info">
+        <div class="ci-name">Amarelo Energia</div>
+        <div class="ci-hex">#FFC700</div>
+        <div class="ci-why">Cor de ação. Energia, alegria e urgência positiva. Usada em badges, tags e elementos de call-to-action.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#004aad;"></div>
+      <div class="color-info">
+        <div class="ci-name">Azul Autoridade</div>
+        <div class="ci-hex">#004AAD</div>
+        <div class="ci-why">Cor de suporte. Transmite seriedade clínica e profissionalismo veterinário para construir credibilidade.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

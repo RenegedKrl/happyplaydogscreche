@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800;900&display=swap');
+  body {
+    margin: 0; padding: 0; width: 1920px; height: 1080px;
+    background-color: #EAEFF5; /* Ice Blue */
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-text {
+    position: absolute;
+    font-size: 300px;
+    font-weight: 900;
+    color: rgba(33, 33, 33, 0.03); /* Rich Black transparent */
+    text-align: center;
+    line-height: 0.8;
+    white-space: nowrap;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: -10px;
+  }
+  .laptop-container {
+    position: relative;
+    z-index: 10;
+    width: 1000px;
+    transform: translateY(20px);
+  }
+  .laptop-screen {
+    width: 100%;
+    height: 640px;
+    background: #000;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 15px 25px 15px;
+    box-sizing: border-box;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  .laptop-screen::after {
+    content: '';
+    position: absolute;
+    top: 10px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px; background: #333; border-radius: 50%;
+  }
+  .screen-content {
+    width: 100%; height: 100%;
+    background-image: url('../screenshots/1-desktop-full.png');
+    background-size: 100% auto;
+    background-position: top center;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+  .laptop-base {
+    width: 1100px;
+    height: 20px;
+    background: linear-gradient(to bottom, #d4d4d4, #999);
+    border-radius: 0 0 20px 20px;
+    margin-left: -50px;
+    position: relative;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 20px 40px rgba(0,0,0,0.3);
+  }
+  .laptop-base::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 150px; height: 5px; background: #b0b0b0;
+    border-radius: 0 0 10px 10px;
+  }
+  .text-overlay {
+    position: absolute;
+    z-index: 20;
+    color: #212121;
+  }
+  .title {
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+  .title span {
+    color: #0a650a;
+  }
+  .subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .top-left { top: 80px; left: 100px; }
+  .bottom-right { bottom: 80px; right: 100px; text-align: right; }
+  .badge {
+    position: absolute;
+    top: 100px; right: 100px;
+    background: #0a650a;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 20px;
+    z-index: 20;
+    box-shadow: 0 10px 20px rgba(10, 101, 10, 0.3);
+  }
+</style>
+</head>
+<body>
+  <div class="bg-text">HAPPY PLAY<br>DOGS CRECHE</div>
+  
+  <div class="text-overlay top-left">
+    <div class="subtitle">Projeto de Web Design</div>
+    <div class="title">Identidade Visual<br>e <span>Landing Page</span>.</div>
+  </div>
+
+  <div class="badge">Lançamento 2026</div>
+
+  <div class="laptop-container">
+    <div class="laptop-screen">
+      <div class="screen-content"></div>
+    </div>
+    <div class="laptop-base"></div>
+  </div>
+
+  <div class="text-overlay bottom-right">
+    <div class="subtitle">Foco em Conversão</div>
+    <div class="title" style="font-size: 40px;">Design Estratégico para<br>Pet Shops e Creches.</div>
+  </div>
+</body>
+</html>

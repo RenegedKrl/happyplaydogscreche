@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#020a05; color:#fff; font-family:'Manrope', sans-serif; overflow:hidden; position:relative; }
+
+  /* Fundo */
+  .glow { position:absolute; width:1200px; height:1200px;
+    background:radial-gradient(circle, rgba(10,101,10,0.3) 0%, transparent 55%);
+    top:50%; left:50%; transform:translate(-50%,-50%); z-index:0; }
+  .grid { position:absolute; inset:0; z-index:0;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size:60px 60px; }
+
+  /* Ghost title */
+  .ghost-title { position:absolute; top:40px; left:0; right:0; text-align:center;
+    font-size:200px; font-weight:900; line-height:1; z-index:1; text-transform:uppercase;
+    color:transparent; -webkit-text-stroke: 1px rgba(10,101,10,0.3); letter-spacing:-8px; }
+
+  /* Barra de topo */
+  .top-bar { position:absolute; top:70px; left:0; right:0; z-index:20; padding:0 80px;
+    display:flex; justify-content:space-between; align-items:center; }
+  .tag { font-size:18px; font-weight:700; color:#ffc700; letter-spacing:3px; text-transform:uppercase; }
+  .slide-num { font-size:22px; font-weight:800; color:rgba(255,255,255,0.2); }
+
+  /* Telefone CSS central */
+  .phone-wrap {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -46%);
+    z-index:10;
+    width:300px;
+  }
+  .phone-body {
+    width:300px;
+    background: linear-gradient(170deg, #2a2a2c, #1a1a1c);
+    border-radius: 44px;
+    border: 3px solid #3a3a3c;
+    box-shadow:
+      0 0 0 1px #0a0a0a,
+      0 0 80px rgba(10,101,10,0.3),
+      0 40px 100px rgba(0,0,0,0.9);
+    padding: 14px;
+  }
+  .phone-notch {
+    width:100px; height:26px; background:#1a1a1c;
+    border-radius:0 0 18px 18px; margin:0 auto 10px;
+  }
+  /* Tela do phone — overflow:hidden para o site não vazar */
+  .phone-screen {
+    width:100%;
+    height:540px;
+    background:#000;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+  }
+  .phone-content {
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    background: url('../screenshots/2-mobile-menu-fechado-full.png') top center / 100% auto no-repeat;
+    background-color:#f5f0e8;
+  }
+  .phone-btn {
+    width:40px; height:5px; background:#2a2a2c;
+    border-radius:3px; margin:10px auto 0;
+  }
+
+  /* Cards de vidro ao redor */
+  .glass-box {
+    position:absolute; z-index:15;
+    background: rgba(10,20,14,0.75); backdrop-filter:blur(24px);
+    border: 1px solid rgba(10,101,10,0.4); border-radius:20px;
+    padding: 28px 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.04);
+    width:290px;
+  }
+  .gb1 { top:320px; left:40px; }
+  .gb2 { top:320px; right:40px; }
+  .gb3 { top:760px; left:40px; }
+  .gb4 { top:760px; right:40px; }
+  .g-num { font-size:18px; font-weight:800; color:#ffc700; margin-bottom:8px; }
+  .g-title { font-size:21px; font-weight:700; margin-bottom:8px; line-height:1.2; }
+  .g-desc { font-size:14px; font-weight:300; color:rgba(255,255,255,0.65); line-height:1.5; }
+
+  /* Rodapé */
+  .footer { position:absolute; bottom:70px; left:80px; right:80px; z-index:20;
+    display:flex; justify-content:center; }
+  .footer h2 { font-size:48px; font-weight:800; text-align:center; line-height:1.15; letter-spacing:-2px; }
+  .footer h2 span { color:#0a650a; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="ghost-title">Goals</div>
+
+<div class="top-bar">
+  <div class="tag">Project Goals</div>
+  <div class="slide-num">2 / 6</div>
+</div>
+
+<div class="phone-wrap">
+  <div class="phone-body">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="phone-content"></div>
+    </div>
+    <div class="phone-btn"></div>
+  </div>
+</div>
+
+<div class="glass-box gb1">
+  <div class="g-num">01 —</div>
+  <div class="g-title">Identidade Visual</div>
+  <div class="g-desc">Paleta estratégica que comunica confiança e amor pelos pets.</div>
+</div>
+<div class="glass-box gb2">
+  <div class="g-num">02 —</div>
+  <div class="g-title">UI/UX Design</div>
+  <div class="g-desc">Jornada pensada para guiar o usuário direto ao WhatsApp.</div>
+</div>
+<div class="glass-box gb3">
+  <div class="g-num">03 —</div>
+  <div class="g-title">Desenvolvimento Web</div>
+  <div class="g-desc">Código em React + Vite, rápido e responsivo em qualquer tela.</div>
+</div>
+<div class="glass-box gb4">
+  <div class="g-num">04 —</div>
+  <div class="g-title">Otimização para Conversão</div>
+  <div class="g-desc">CTAs flutuantes visíveis durante toda a navegação do cliente.</div>
+</div>
+
+<div class="footer">
+  <h2><span>Happy Play Dogs</span><br>Project Goals</h2>
+</div>
+</body>
+</html>
