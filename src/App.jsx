@@ -19,11 +19,11 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <BeforeAfter />
         <Gallery />
         <CtaBanner />
         <Services />
-        <About />
         <Testimonials />
         <Faq />
         <Location />
