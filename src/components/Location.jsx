@@ -29,7 +29,7 @@ const Location = () => {
               </div>
             </div>
             
-            <a href="#" className="btn btn-outline" style={{ marginTop: '2rem' }}>
+            <a href="https://maps.app.goo.gl/t7PzNXhH9xvmPq1B8" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ marginTop: '2rem' }}>
               <Navigation size={18} />
               Como Chegar
             </a>
