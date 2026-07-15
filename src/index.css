@@ -61,6 +61,11 @@ a {
   color: inherit;
 }
 
+/* Prevent double click tracking in GTM for WhatsApp buttons */
+a[href*="wa.me"] * {
+  pointer-events: none;
+}
+
 button {
   cursor: pointer;
   font-family: inherit;
